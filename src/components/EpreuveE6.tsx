@@ -9,7 +9,7 @@ const EpreuveE6 = () => {
             technologies: ["React Native", "Expo", "OpenAI API", "SpeechRecognition", "Text-to-Speech"],
             link: "public/GloireBoungAI – Assistant Vocal Intelligent .pdf",
             report: "public/GloireBoungAI – Assistant Vocal Intelligent .pdf",
-            fiche1: "public/GloireBoungAI – Assistant Vocal Intelligent .pdf",
+            fiche1: "public/fiche-de-réalisation.pdf",
            
         },
         {
@@ -18,7 +18,7 @@ const EpreuveE6 = () => {
             technologies: ["React Native", "Expo", "OpenWeatherAPI", "Tailwind Native"],
             link: "public/WeatherApp.pdf",
             report: "public/WeatherApp.pdf",
-            fiche1: "public/BTS SIO 2025 - Annexes (2).pdf",
+            fiche1: "public/Fiche-de-réalisation.2.pdf",
             
         },
     ];
