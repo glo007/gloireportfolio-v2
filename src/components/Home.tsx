@@ -26,9 +26,10 @@ const Home: React.FC = () => {
           </span>
         </h1>
         <p className="my-4 text-md text-center md:text-left">
-          Je suis étudiant en Bachelor Data & App Design à l'Estiam Paris.
-          <br /> Passionné par le développement web et mobile.
-          <br /> En alternance chez 42C, je travaille sur des projets concrets
+          Je suis étudiant en deuxième année BTS SIO option SLAM,
+          <br /> à l'Estiam Paris.
+          <br /> Passionné par le développement web.
+          <br /> En alternance chez 42c, je travaille sur des projets concrets
           alliant backend, frontend et sécurité des applications.
           <br /> Mon objectif ? Créer des solutions innovantes, performantes et
           sécurisées.
