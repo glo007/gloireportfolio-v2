@@ -2,7 +2,7 @@
   "name": "glorie-boungou-portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/glo007/Portfolio.git",
+  "homepage": "https://glo007.github.io/gloireportfolio-v2/",
   "type": "module",
   "scripts": {
     "dev": "vite",
