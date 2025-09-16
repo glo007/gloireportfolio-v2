@@ -6,12 +6,12 @@ import Navbar from "./components/Navbar";
 import EpreuveE6 from "./components/EpreuveE6";
 import VeilleTechnologique from "./components/VeilleTechnologique";
 import EpreuveE5 from "./components/EpreuveE5";
-import Contact  from "./components/Contact";
+import Contact from "./components/Contact";
 
 export default function App() {
   return (
     <div>
-      <div className="p-5 md:px -[15%]">
+      <div className="p-5 md:px-[15%]">
         <Navbar />
 
         <Home />
@@ -19,27 +19,27 @@ export default function App() {
 
       <About />
 
-      <div className="p-5 md:px -[15%]">
+      <div className="p-5 md:px-[15%]">
         <Experiences />
       </div>
 
-      <div className="p-5 md:px -[15%]">
+      <div className="p-5 md:px-[15%]">
         <EpreuveE5 />
       </div>
 
-      <div className="p-5 md:px -[15%]">
+      <div className="p-5 md:px-[15%]">
         <EpreuveE6 />
       </div>
 
-      <div className="p-5 md:px -[15%]">
+      <div className="p-5 md:px-[15%]">
         <VeilleTechnologique />
       </div>
 
-      <div className="p-5 md:px -[15%]">
-        <Contact/>
+      <div className="p-5 md:px-[15%]">
+        <Contact />
       </div>
 
       <Footer />
     </div>
-  )
+  );
 }
