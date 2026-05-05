@@ -17,6 +17,8 @@ interface ProjectE6 {
   gradient: string;
   icon: React.ReactNode;
   stats: { label: string; value: string }[];
+  showDoc?: boolean;
+  ficheDownload?: boolean;
 }
 
 const projectsE6: ProjectE6[] = [
@@ -39,6 +41,8 @@ const projectsE6: ProjectE6[] = [
       { label: "Stack", value: "Fullstack" },
       { label: "Format", value: "PDF/CSV/Excel" },
     ],
+    showDoc: false,
+    ficheDownload: false,
   },
   {
     title: "Next Drop",
@@ -59,6 +63,8 @@ const projectsE6: ProjectE6[] = [
       { label: "Stack", value: "Vanilla JS" },
       { label: "Style", value: "Cyberpunk" },
     ],
+    showDoc: false,
+    ficheDownload: true,
   },
 ];
 
@@ -231,33 +237,29 @@ const ProjectCardE6 = ({ p, index }: { p: ProjectE6; index: number }) => {
 
           {/* Actions */}
           <div className="mt-auto flex flex-col gap-2 pt-4 border-t border-white/6">
-            {/* Boutons rapports */}
-            <div className="flex flex-col gap-2">
-              {p.pdf && (
-                <button
-                  onClick={() => setActivePdf(p.pdf!)}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
-                  style={{ background: p.gradient }}
-                >
-                  <FileText className="w-4 h-4" />
-                  Voir la documentation
-                </button>
-              )}
+            {/* Bouton documentation (optionnel) */}
+            {p.showDoc !== false && p.pdf && (
               <button
-                onClick={() => setActivePdf(p.fiche)}
-                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold transition-colors"
-                style={{
-                  background: `${p.color}10`,
-                  border: `1px solid ${p.color}30`,
-                  color: p.color,
-                }}
+                onClick={() => setActivePdf(p.pdf!)}
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
+                style={{ background: p.gradient }}
               >
                 <FileText className="w-4 h-4" />
-                Fiche de situation professionnelle
+                Voir la documentation
               </button>
-            </div>
+            )}
 
-            {/* Secondaires */}
+            {/* Fiche de situation professionnelle */}
+            <button
+              onClick={() => setActivePdf(p.fiche)}
+              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold transition-colors"
+              style={{ background: `${p.color}10`, border: `1px solid ${p.color}30`, color: p.color }}
+            >
+              <FileText className="w-4 h-4" />
+              Fiche de situation professionnelle
+            </button>
+
+            {/* Boutons secondaires */}
             <div className="flex gap-2">
               <button
                 onClick={() => setShowDetails(!showDetails)}
@@ -266,8 +268,8 @@ const ProjectCardE6 = ({ p, index }: { p: ProjectE6; index: number }) => {
               >
                 {showDetails ? "Masquer" : "Détails"}
               </button>
-              {p.pdf && (
-                <a href={p.pdf} download
+              {p.ficheDownload && (
+                <a href={p.fiche} download
                    className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-semibold transition-colors"
                    style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.5)" }}>
                   <Download className="w-3.5 h-3.5" /> Télécharger
