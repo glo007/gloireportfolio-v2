@@ -22,12 +22,12 @@ interface ProjectE6 {
 
 const projectsE6: ProjectE6[] = [
   {
-    title: "GloireBoungAI",
-    subtitle: "Assistant vocal intelligent",
+    title: "Diploma Gate Guardian",
+    subtitle: "Application web de surveillance de diplômes",
     description:
-      "Application mobile React Native intégrant l'API OpenAI — interaction avec une IA via la voix.",
+      "Diploma Gate Guardian est une application numérique de vérification et d’authentification de documents officiels, conçue principalement pour les établissements scolaires et les administrations publiques.",
     longDescription:
-      "Application mobile développée avec React Native et Expo, intégrant l'API OpenAI GPT-4. L'utilisateur parle au micro : la reconnaissance vocale (SpeechRecognition) transcrit l'audio en texte, l'API OpenAI génère une réponse intelligente, puis la synthèse vocale (Text-to-Speech) la lit à voix haute. Interface animée avec retour visuel en temps réel du traitement.",
+      "Application mweb  est une application web développée en TypeScript avec React, permettant de générer et vérifier l’authenticité de documents officiels (CSV, Excel, PDF) grâce à un code unique attribué à chaque document.",
     technologies: ["React Native", "Expo", "OpenAI API", "SpeechRecognition", "TTS"],
     pdf: "/GloireBoungAI – Assistant Vocal Intelligent .pdf",
     fiche: "/fiche-de-réalisation.pdf",
@@ -36,19 +36,19 @@ const projectsE6: ProjectE6[] = [
     gradient: "linear-gradient(135deg, #0ea5e9 0%, #7c3aed 100%)",
     icon: <BrainCircuit className="w-12 h-12 text-white/90" />,
     stats: [
-      { label: "Type", value: "Mobile IA" },
-      { label: "API", value: "OpenAI" },
-      { label: "OS", value: "iOS" },
+      { label: "Type", value: "Web App" },
+      { label: "API", value: "React (TypeScript)" },
+      { label: "Format", value: "PDF/CSV/Excel" },
     ],
   },
   {
-    title: "WeatherApp",
-    subtitle: "Application météo dynamique",
+    title: "Next Drop",
+    subtitle: "plateforme de découverte de jeux vidéo",
     description:
-      "Application mobile affichant les conditions météo actuelles et les prévisions à 7 jours.",
+      "Site web présentant les prochaines sorties de jeux vidéo avec une interface immersive.",
     longDescription:
-      "Application mobile développée avec React Native et Expo, consommant l'API OpenWeatherMap. Affiche la météo en temps réel (température, humidité, vent, pression) et les prévisions à 7 jours. Géolocalisation automatique de l'utilisateur, recherche par ville, animations météo dynamiques (soleil, pluie, nuages), interface adaptée au thème jour/nuit.",
-    technologies: ["React Native", "Expo", "OpenWeather API", "Geolocation"],
+      "NextDrop est une plateforme web au design rétrofuturiste inspiré du cyberpunk. Elle permet aux utilisateurs de découvrir les prochaines sorties de jeux vidéo sur différentes plateformes avec une navigation fluide et animée.",
+    technologies: ["HTML", "CSS", "JavaScript"],
     pdf: null,
     fiche: "/Fiche-de-réalisation.2.pdf",
     image: null,
@@ -56,9 +56,9 @@ const projectsE6: ProjectE6[] = [
     gradient: "linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%)",
     icon: <CloudSun className="w-12 h-12 text-white/90" />,
     stats: [
-      { label: "Type", value: "Mobile App" },
-      { label: "API", value: "Weather" },
-      { label: "OS", value: "iOS" },
+      { label: "Type", value: "Web App" },
+      { label: "API", value: "HTML/CSS/JavaScript" },
+      { label: "Format", value: "Gaming / Cyberpunk" },
     ],
   },
 ];

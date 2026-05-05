@@ -52,13 +52,13 @@ const experiences: Experience[] = [
     id: 1,
     role: "Apprenti Développeur",
     company: "42Consulting",
-    period: "Déc. 2024 – présent",
+    period: "Déc. 2024 – Août 2025",
     type: "Alternance",
     description: [
       "Développement d'une application de vérification et d'authentification de documents officiels.",
       "Intégration de bases de données Hyperplanning et Excel.",
       "Système d'authentification sécurisé pour écoles et étudiants.",
-      "Interfaces glassmorphism modernes et responsive.",
+      "Interfaces UI modernes et responsive.",
       "Collaboration avec l'équipe IT sur la scalabilité et la sécurité.",
     ],
     longDescription:

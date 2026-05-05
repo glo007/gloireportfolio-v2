@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "6+",  label: "Projets" },
+  { value: "10+",  label: "Projets" },
   { value: "2+",  label: "Ans d'exp." },
   { value: "10+", label: "Technologies" },
 ];
@@ -116,7 +116,7 @@ const Home = () => {
               <span className="text-white/75">
                 <Typewriter
                   options={{
-                    strings: ["Développeur Web Full-Stack", "Étudiant BTS SIO SLAM", "Apprenti chez 42Consulting"],
+                    strings: ["Développeur Web Full-Stack", "Étudiant BTS SIO SLAM", "Ancien-Apprenti chez 42Consulting"],
                     autoStart: true,
                     loop: true,
                     delay: 60,
@@ -127,7 +127,7 @@ const Home = () => {
             </div>
 
             <p className="text-white/55 text-base md:text-lg max-w-xl mb-8 leading-relaxed">
-              Étudiant en BTS SIO option SLAM à l'Estiam Paris, en alternance chez&nbsp;
+              Étudiant en BTS SIO option SLAM, en alternance chez&nbsp;
               <span className="text-accent font-semibold">42Consulting</span>.
               Je conçois des solutions web innovantes — du backend robuste aux interfaces modernes et
               sécurisées.
