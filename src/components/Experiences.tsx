@@ -100,16 +100,12 @@ const ExperienceCard = ({ exp, i }: { exp: Experience; i: number }) => {
 
   return (
     <motion.div
-      className="timeline-item"
-      initial={{ opacity: 0, x: -30 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, y: 28 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.15 }}
     >
-      <div className="timeline-dot" />
-      {i < experiences.length - 1 && <div className="timeline-line" />}
-
-      <div className="glass-card p-6 flex flex-col">
+      <div className="glass-card p-6 flex flex-col h-full">
         {/* Header */}
         <div className="flex items-start gap-4 mb-4">
           <img
@@ -202,7 +198,7 @@ const ExperienceCard = ({ exp, i }: { exp: Experience; i: number }) => {
   );
 };
 
-/* ── Section ──────────────────────────────────────────── */
+/* ── Section ─────────────────────────────────────────── */
 const Experiences = () => {
   return (
     <section id="Experiences" className="section-primary py-24 px-6 md:px-[8%]">
@@ -212,37 +208,38 @@ const Experiences = () => {
           subtitle="Mon parcours professionnel et mes compétences techniques."
         />
 
-        <div className="flex flex-col lg:flex-row gap-14">
+        <div className="flex flex-col gap-10">
           {/* Timeline */}
-          <div className="flex-1">
+          <div className="grid md:grid-cols-2 gap-8">
             {experiences.map((exp, i) => (
               <ExperienceCard key={exp.id} exp={exp} i={i} />
             ))}
           </div>
 
-          {/* Skills grid */}
+          {/* Skills — horizontal strip */}
           <motion.div
-            className="lg:w-72"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="w-full"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <h3 className="text-white/70 text-sm font-semibold uppercase tracking-widest mb-6 text-center lg:text-left">
+            <h3 className="text-white/70 text-sm font-semibold uppercase tracking-widest mb-4 text-center">
               Stack technique
             </h3>
-            <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-3 gap-3">
+            <div className="flex flex-wrap justify-center gap-3">
               {skills.map((sk, i) => (
                 <motion.div
                   key={sk.id}
-                  className="skill-chip"
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  className="skill-chip flex-row px-4 py-2.5"
+                  style={{ flexDirection: "row", gap: "8px" }}
+                  initial={{ opacity: 0, scale: 0.85 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.05 }}
+                  transition={{ duration: 0.35, delay: i * 0.04 }}
                 >
-                  <img src={sk.image} alt={sk.name} className="w-8 h-8 object-contain" />
-                  <span className="text-xs text-white/55 text-center leading-tight">{sk.name}</span>
+                  <img src={sk.image} alt={sk.name} className="w-6 h-6 object-contain flex-shrink-0" />
+                  <span className="text-xs text-white/65 font-medium whitespace-nowrap">{sk.name}</span>
                 </motion.div>
               ))}
             </div>
