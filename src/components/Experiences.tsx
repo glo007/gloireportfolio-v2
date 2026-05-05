@@ -1,7 +1,7 @@
 import Title from "./Title";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { ExternalLink, ChevronDown } from "lucide-react";
+import { ExternalLink, ChevronDown, FileText, Download, X } from "lucide-react";
 
 import imgHTML     from "../assets/techno/html.png";
 import imgCSS      from "../assets/techno/css.png";
@@ -41,6 +41,7 @@ interface Experience {
   technologies: string[];
   relatedSection: string;
   relatedLabel: string;
+  rapport: string;
   image: string;
   color: string;
 }
@@ -64,6 +65,7 @@ const experiences: Experience[] = [
     technologies: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "React Native", "OpenAI API"],
     relatedSection: "EpreuveE6",
     relatedLabel: "Projets E6",
+    rapport: "/rapport-alternance-42consulting.pdf",
     image: consulting,
     color: "#00b5ff",
   },
@@ -85,26 +87,90 @@ const experiences: Experience[] = [
     technologies: ["Windows", "Active Directory", "Réseau LAN", "Support N1/N2", "Documentation technique"],
     relatedSection: "EpreuveE5",
     relatedLabel: "Projets E5",
+    rapport: "/rapport-stage-arpce.pdf",
     image: arpce,
     color: "#7c3aed",
   },
 ];
 
+/* ── Modal PDF ────────────────────────────────────────── */
+const PdfModal = ({ exp, onClose }: { exp: Experience; onClose: () => void }) => (
+  <AnimatePresence>
+    <motion.div
+      className="fixed inset-0 z-[200] flex items-center justify-center p-4"
+      initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+    >
+      <motion.div
+        className="absolute inset-0"
+        style={{ background: "rgba(0,0,0,0.85)", backdropFilter: "blur(8px)" }}
+        onClick={onClose}
+        initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+      />
+      <motion.div
+        className="relative w-full max-w-5xl h-[90vh] flex flex-col rounded-2xl overflow-hidden"
+        style={{ background: "#0d1525", border: "1px solid rgba(255,255,255,0.1)" }}
+        initial={{ opacity: 0, scale: 0.92, y: 24 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.92, y: 24 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+      >
+        <div className="flex items-center justify-between px-6 py-4 flex-shrink-0"
+             style={{ borderBottom: "1px solid rgba(255,255,255,0.07)" }}>
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center"
+                 style={{ background: `linear-gradient(135deg, ${exp.color}, ${exp.color === "#00b5ff" ? "#7c3aed" : "#4f46e5"})` }}>
+              <FileText className="w-4 h-4 text-white" />
+            </div>
+            <div>
+              <p className="text-white font-bold text-sm">{exp.company}</p>
+              <p className="text-white/40 text-xs">Rapport de {exp.type.toLowerCase()}</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <a href={exp.rapport} download
+               className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg"
+               style={{ background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.6)" }}>
+              <Download className="w-3.5 h-3.5" /> Télécharger
+            </a>
+            <a href={exp.rapport} target="_blank" rel="noopener noreferrer"
+               className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg"
+               style={{ background: `${exp.color}20`, color: exp.color, border: `1px solid ${exp.color}40` }}>
+              <ExternalLink className="w-3.5 h-3.5" /> Ouvrir
+            </a>
+            <button onClick={onClose}
+                    className="w-8 h-8 rounded-lg flex items-center justify-center"
+                    style={{ background: "rgba(255,255,255,0.06)" }}>
+              <X className="w-4 h-4 text-white/60" />
+            </button>
+          </div>
+        </div>
+        <div className="flex-1 overflow-hidden">
+          <iframe src={`${exp.rapport}#view=FitH`} className="w-full h-full"
+                  title={`Rapport — ${exp.company}`} style={{ border: "none", background: "#fff" }} />
+        </div>
+      </motion.div>
+    </motion.div>
+  </AnimatePresence>
+);
+
 /* ── Carte expérience ─────────────────────────────────── */
 const ExperienceCard = ({ exp, i }: { exp: Experience; i: number }) => {
   const [showDetails, setShowDetails] = useState(false);
+  const [showPdf, setShowPdf] = useState(false);
 
   const handleViewProjects = () => {
     document.getElementById(exp.relatedSection)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 28 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.15 }}
-    >
+    <>
+      {showPdf && <PdfModal exp={exp} onClose={() => setShowPdf(false)} />}
+      <motion.div
+        initial={{ opacity: 0, y: 28 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.15 }}
+      >
       <div className="glass-card p-6 flex flex-col h-full">
         {/* Header */}
         <div className="flex items-start gap-4 mb-4">
@@ -169,32 +235,41 @@ const ExperienceCard = ({ exp, i }: { exp: Experience; i: number }) => {
 
         {/* Actions */}
         <div className="mt-auto pt-4 border-t border-white/6 flex flex-col gap-2">
+          {/* Rapport */}
           <button
-            onClick={handleViewProjects}
+            onClick={() => setShowPdf(true)}
             className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl text-sm font-semibold text-white transition-all duration-200 hover:brightness-110"
             style={{ background: `linear-gradient(135deg, ${exp.color}, ${exp.color === "#00b5ff" ? "#7c3aed" : "#4f46e5"})` }}
           >
-            <ExternalLink className="w-4 h-4" />
-            {exp.relatedLabel}
+            <FileText className="w-4 h-4" />
+            Voir le rapport
           </button>
-          <button
-            onClick={() => setShowDetails(!showDetails)}
-            className="w-full flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-semibold transition-colors"
-            style={{
-              background: "rgba(255,255,255,0.05)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              color: "rgba(255,255,255,0.5)",
-            }}
-          >
-            <ChevronDown
-              className="w-3.5 h-3.5 transition-transform duration-300"
-              style={{ transform: showDetails ? "rotate(180deg)" : "rotate(0deg)" }}
-            />
-            {showDetails ? "Masquer les détails" : "Voir les détails"}
-          </button>
+          {/* Projets + Détails */}
+          <div className="flex gap-2">
+            <button
+              onClick={handleViewProjects}
+              className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-semibold transition-colors"
+              style={{ background: `${exp.color}12`, border: `1px solid ${exp.color}30`, color: exp.color }}
+            >
+              <ExternalLink className="w-3.5 h-3.5" />
+              {exp.relatedLabel}
+            </button>
+            <button
+              onClick={() => setShowDetails(!showDetails)}
+              className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-semibold transition-colors"
+              style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.5)" }}
+            >
+              <ChevronDown
+                className="w-3.5 h-3.5 transition-transform duration-300"
+                style={{ transform: showDetails ? "rotate(180deg)" : "rotate(0deg)" }}
+              />
+              {showDetails ? "Masquer" : "Détails"}
+            </button>
+          </div>
         </div>
       </div>
-    </motion.div>
+      </motion.div>
+    </>
   );
 };
 
