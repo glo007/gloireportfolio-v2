@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import About from "./components/About";
 import Experiences from "./components/Experiences";
 import Footer from "./components/Footer";
@@ -9,36 +10,28 @@ import EpreuveE5 from "./components/EpreuveE5";
 import Contact from "./components/Contact";
 
 export default function App() {
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      setScrollProgress(total > 0 ? (window.scrollY / total) * 100 : 0);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <div>
-      <div className="p-5 md:px-[15%]">
-        <Navbar />
-
-        <Home />
-      </div>
-
+    <div style={{ background: "#080e1c" }}>
+      <div className="scroll-bar" style={{ width: `${scrollProgress}%` }} />
+      <Navbar />
+      <Home />
       <About />
-
-      <div className="p-5 md:px-[15%]">
-        <Experiences />
-      </div>
-
-      <div className="p-5 md:px-[15%]">
-        <EpreuveE5 />
-      </div>
-
-      <div className="p-5 md:px-[15%]">
-        <EpreuveE6 />
-      </div>
-
-      <div className="p-5 md:px-[15%]">
-        <VeilleTechnologique />
-      </div>
-
-      <div className="p-5 md:px-[15%]">
-        <Contact />
-      </div>
-
+      <Experiences />
+      <EpreuveE5 />
+      <EpreuveE6 />
+      <VeilleTechnologique />
+      <Contact />
       <Footer />
     </div>
   );
