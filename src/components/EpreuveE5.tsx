@@ -121,7 +121,7 @@ const projects: Project[] = [
     longDescription:
       "Capture et analyse de trames réseau pour comprendre le fonctionnement des protocoles (HTTP, DNS, TCP). Identification d'anomalies de sécurité et diagnostic de problèmes de connectivité via l'inspection profonde des paquets.",
     technologies: ["Wireshark", "Protocoles TCP/IP", "Sécurité Réseau"],
-    pdf: "/Documentation-Wireshark.pdf",
+    pdf: "public/6-Lab - Using Wireshark to Examine Ethernet Frames solution.pdf",
     color: "#4ade80",
     gradient: "linear-gradient(135deg, #22c55e 0%, #16a34a 100%)",
     icon: <Activity className="w-12 h-12 text-white/90" />,
@@ -137,7 +137,7 @@ const projects: Project[] = [
     longDescription:
       "Mise en place de l'adressage automatique (DHCP) et de la résolution de noms (DNS) sur des environnements mixtes Windows et Linux. Optimisation de la gestion du parc informatique et de la connectivité réseau.",
     technologies: ["Windows Server", "Linux", "DHCP", "DNS"],
-    pdf: "/Documentation-Services-Reseau.pdf",
+    pdf: "public/Lab-Configuring_Base_Switch_Settings.pdf",
     color: "#fbbf24",
     gradient: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
     icon: <Server className="w-12 h-12 text-white/90" />,
@@ -153,7 +153,7 @@ const projects: Project[] = [
     longDescription:
       "Simulation d'un réseau d'entreprise complet avec routage et adressage IP via l'outil Cisco Packet Tracer. Conception de l'architecture logique et physique d'un réseau local performant.",
     technologies: ["Cisco Packet Tracer", "Routage", "Adressage IP"],
-    pdf: "/Documentation-Cisco-Packet-Tracer.pdf",
+    pdf: "public/Doc-cloisonnement-BOUNGOU-MBIMI.pdf",
     color: "#0ea5e9",
     gradient: "linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)",
     icon: <Network className="w-12 h-12 text-white/90" />,
