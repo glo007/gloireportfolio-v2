@@ -31,7 +31,11 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-white/35 text-sm leading-relaxed">
+<<<<<<< Updated upstream
               Développeur Web Full Stack · BTS SIO SLAM.
+=======
+              Développeur Web Full Stack · BTS SIO SLAM .
+>>>>>>> Stashed changes
               Passionné par la création de solutions numériques innovantes.
             </p>
           </div>
@@ -79,7 +83,7 @@ const Footer = () => {
         {/* Bottom row */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-white/25 text-xs">
-            © {new Date().getFullYear()} Gloire Bryan Boungou Mbimi — Tous droits réservés.
+            © {new Date().getFullYear()} Gloire Bryan BOUNGOU MBIMI — Tous droits réservés.
           </p>
           <button
             onClick={scrollTop}

@@ -101,7 +101,11 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.35 }}
           >
+<<<<<<< Updated upstream
             <div className="pill-badge mb-5 inline-flex">Disponible · Alternance/Stage</div>
+=======
+            <div className="pill-badge mb-5 inline-flex">Disponible · Alternance/stage</div>
+>>>>>>> Stashed changes
 
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-1">
               Bonjour, je suis
