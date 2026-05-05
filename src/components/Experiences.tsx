@@ -2,6 +2,7 @@ import Title from "./Title";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ExternalLink, ChevronDown, FileText, Download, X } from "lucide-react";
+// ExternalLink used in PdfModal only
 
 import imgHTML     from "../assets/techno/html.png";
 import imgCSS      from "../assets/techno/css.png";
@@ -244,28 +245,18 @@ const ExperienceCard = ({ exp, i }: { exp: Experience; i: number }) => {
             <FileText className="w-4 h-4" />
             Voir le rapport
           </button>
-          {/* Projets + Détails */}
-          <div className="flex gap-2">
-            <button
-              onClick={handleViewProjects}
-              className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-semibold transition-colors"
-              style={{ background: `${exp.color}12`, border: `1px solid ${exp.color}30`, color: exp.color }}
-            >
-              <ExternalLink className="w-3.5 h-3.5" />
-              {exp.relatedLabel}
-            </button>
-            <button
-              onClick={() => setShowDetails(!showDetails)}
-              className="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-semibold transition-colors"
-              style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.5)" }}
-            >
-              <ChevronDown
-                className="w-3.5 h-3.5 transition-transform duration-300"
-                style={{ transform: showDetails ? "rotate(180deg)" : "rotate(0deg)" }}
-              />
-              {showDetails ? "Masquer" : "Détails"}
-            </button>
-          </div>
+          {/* Détails uniquement */}
+          <button
+            onClick={() => setShowDetails(!showDetails)}
+            className="w-full flex items-center justify-center gap-1.5 py-2 rounded-xl text-xs font-semibold transition-colors"
+            style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.5)" }}
+          >
+            <ChevronDown
+              className="w-3.5 h-3.5 transition-transform duration-300"
+              style={{ transform: showDetails ? "rotate(180deg)" : "rotate(0deg)" }}
+            />
+            {showDetails ? "Masquer les détails" : "Voir les détails"}
+          </button>
         </div>
       </div>
       </motion.div>

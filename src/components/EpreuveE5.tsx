@@ -1,4 +1,4 @@
-import { FileText, Download, X, ExternalLink, Shield, Code2, Eye, CheckSquare, Plane, Grid3x3 } from "lucide-react";
+import { FileText, Download, X, ExternalLink, ShieldCheck, Braces, ScanFace, ListTodo, Rocket, Hash } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Title from "./Title";
@@ -27,7 +27,7 @@ const projects: Project[] = [
     pdf: "/Documentation-Diploma Gate Guardian.pdf",
     color: "#00b5ff",
     gradient: "linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)",
-    icon: <Shield className="w-12 h-12 text-white/90" />,
+    icon: <ShieldCheck className="w-12 h-12 text-white/90" />,
     stats: [
       { label: "Type", value: "Web App" },
       { label: "Contexte", value: "Alternance" },
@@ -43,7 +43,7 @@ const projects: Project[] = [
     pdf: "/JavaScript Projects – Mini Applications Web Interactives .pdf",
     color: "#eab308",
     gradient: "linear-gradient(135deg, #eab308 0%, #f97316 100%)",
-    icon: <Code2 className="w-12 h-12 text-white/90" />,
+    icon: <Braces className="w-12 h-12 text-white/90" />,
     stats: [
       { label: "Type", value: "Web Apps" },
       { label: "Projets", value: "6 apps" },
@@ -59,7 +59,7 @@ const projects: Project[] = [
     pdf: "/FaceTracking-Python .pdf",
     color: "#10b981",
     gradient: "linear-gradient(135deg, #10b981 0%, #06b6d4 100%)",
-    icon: <Eye className="w-12 h-12 text-white/90" />,
+    icon: <ScanFace className="w-12 h-12 text-white/90" />,
     stats: [
       { label: "Type", value: "Vision IA" },
       { label: "Langage", value: "Python" },
@@ -75,7 +75,7 @@ const projects: Project[] = [
     pdf: "/Gloire-ToDoList .pdf",
     color: "#8b5cf6",
     gradient: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
-    icon: <CheckSquare className="w-12 h-12 text-white/90" />,
+    icon: <ListTodo className="w-12 h-12 text-white/90" />,
     stats: [
       { label: "Type", value: "Mobile App" },
       { label: "OS", value: "iOS" },
@@ -91,7 +91,7 @@ const projects: Project[] = [
     pdf: "/Documentation du Mini Projet-Bataille Aérienne .pdf",
     color: "#f59e0b",
     gradient: "linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #0f172a 100%)",
-    icon: <Plane className="w-12 h-12 text-white/90" />,
+    icon: <Rocket className="w-12 h-12 text-white/90" />,
     stats: [
       { label: "Type", value: "Jeu 2D" },
       { label: "Langage", value: "Python" },
@@ -107,7 +107,7 @@ const projects: Project[] = [
     pdf: "/Documentation Complète — Morpion Tkinter (Tic-Tac-Toe) .pdf",
     color: "#ef4444",
     gradient: "linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #7f1d1d 100%)",
-    icon: <Grid3x3 className="w-12 h-12 text-white/90" />,
+    icon: <Hash className="w-12 h-12 text-white/90" />,
     stats: [
       { label: "Type", value: "Jeu IA" },
       { label: "Algo", value: "Minimax" },

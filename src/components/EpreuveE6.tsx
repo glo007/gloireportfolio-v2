@@ -1,4 +1,4 @@
-import { FileText, Download, X, ExternalLink, Mic, Cloud } from "lucide-react";
+import { FileText, Download, X, ExternalLink, BrainCircuit, CloudSun } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Title from "./Title";
@@ -34,7 +34,7 @@ const projectsE6: ProjectE6[] = [
     image: mobileScreenshot,
     color: "#00b5ff",
     gradient: "linear-gradient(135deg, #0ea5e9 0%, #7c3aed 100%)",
-    icon: <Mic className="w-12 h-12 text-white/90" />,
+    icon: <BrainCircuit className="w-12 h-12 text-white/90" />,
     stats: [
       { label: "Type", value: "Mobile IA" },
       { label: "API", value: "OpenAI" },
@@ -54,7 +54,7 @@ const projectsE6: ProjectE6[] = [
     image: null,
     color: "#7c3aed",
     gradient: "linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%)",
-    icon: <Cloud className="w-12 h-12 text-white/90" />,
+    icon: <CloudSun className="w-12 h-12 text-white/90" />,
     stats: [
       { label: "Type", value: "Mobile App" },
       { label: "API", value: "Weather" },
