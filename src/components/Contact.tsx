@@ -75,7 +75,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-white/40 text-xs mb-0.5">Localisation</p>
-                    <p className="text-white text-sm">Paris, France</p>
+                    <p className="text-white text-sm">Massy, France</p>
                   </div>
                 </div>
 
@@ -86,7 +86,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-white/40 text-xs mb-0.5">Disponibilité</p>
-                    <p className="text-white text-sm">Alternance · Freelance</p>
+                    <p className="text-white text-sm">Alternance · Stage</p>
                   </div>
                 </div>
               </div>

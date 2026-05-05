@@ -101,13 +101,14 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.35 }}
           >
-            <div className="pill-badge mb-5 inline-flex">Disponible · Alternance</div>
+            <div className="pill-badge mb-5 inline-flex">Disponible · Alternance/Stage</div>
 
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-1">
               Bonjour, je suis
             </h1>
 
             <h2 className="text-5xl md:text-6xl xl:text-7xl font-extrabold leading-tight mb-3 gradient-text">
+              BOUNGOU MBIMI <br />
               Gloire Bryan
             </h2>
 
@@ -127,7 +128,7 @@ const Home = () => {
             </div>
 
             <p className="text-white/55 text-base md:text-lg max-w-xl mb-8 leading-relaxed">
-              Étudiant en BTS SIO option SLAM, en alternance chez&nbsp;
+              Étudiant en BTS SIO option SLAM, Ancien apprenti chez&nbsp;
               <span className="text-accent font-semibold">42Consulting</span>.
               Je conçois des solutions web innovantes — du backend robuste aux interfaces modernes et
               sécurisées.
