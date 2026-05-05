@@ -31,11 +31,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-white/35 text-sm leading-relaxed">
-
               Développeur Web Full Stack · BTS SIO SLAM.
-
-              Développeur Web Full Stack · BTS SIO SLAM .
-
               Passionné par la création de solutions numériques innovantes.
             </p>
           </div>

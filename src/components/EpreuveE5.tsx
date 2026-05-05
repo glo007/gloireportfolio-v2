@@ -1,4 +1,4 @@
-import { FileText, Download, X, ExternalLink, ShieldCheck, Braces, ScanFace, ListTodo, Rocket, Hash } from "lucide-react";
+import { FileText, Download, X, ExternalLink, ShieldCheck, Braces, ScanFace, ListTodo, Rocket, Hash, Activity, Server, Network } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Title from "./Title";
@@ -41,7 +41,7 @@ const projects: Project[] = [
     longDescription:
       "Ensemble de projets JavaScript interactifs réalisés en autonomie : calculatrice, quiz dynamique, gestionnaire de tâches, horloge analogique, convertisseur de devises. Chaque mini-projet met en pratique une notion JavaScript spécifique (DOM, événements, API fetch, LocalStorage, animations CSS).",
     technologies: ["HTML5", "CSS3", "JavaScript ES6+", "Fetch API"],
-    pdf: "public/JavaScript Projects – Mini Applications Web Interactives .pdf",
+    pdf: "/JavaScript Projects – Mini Applications Web Interactives .pdf",
     color: "#eab308",
     gradient: "linear-gradient(135deg, #eab308 0%, #f97316 100%)",
     icon: <Braces className="w-12 h-12 text-white/90" />,
@@ -57,7 +57,7 @@ const projects: Project[] = [
     longDescription:
       "Programme Python utilisant la bibliothèque OpenCV pour détecter et suivre les visages en temps réel depuis la webcam. Le système identifie les points du visage (yeux, bouche, nez) via Haar Cascade Classifiers et les suit dans le flux vidéo. Projet d'introduction à la Computer Vision.",
     technologies: ["Python 3", "OpenCV", "NumPy", "Haar Cascade"],
-    pdf: "public/FaceTracking-Python .pdf",
+    pdf: "/FaceTracking-Python .pdf",
     color: "#10b981",
     gradient: "linear-gradient(135deg, #10b981 0%, #06b6d4 100%)",
     icon: <ScanFace className="w-12 h-12 text-white/90" />,
@@ -73,7 +73,7 @@ const projects: Project[] = [
     longDescription:
       "Application mobile de gestion de tâches développée avec React Native et Expo. Fonctionnalités : ajout/suppression/édition de tâches, marquage comme terminée, filtrage par statut, persistance locale avec AsyncStorage, interface fluide avec animations. Testée sur iOS (Xcode Simulator).",
     technologies: ["React Native", "Expo", "AsyncStorage", "Xcode"],
-    pdf: "public/Gloire-ToDoList .pdf",
+    pdf: "/Gloire-ToDoList .pdf",
     color: "#8b5cf6",
     gradient: "linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)",
     icon: <ListTodo className="w-12 h-12 text-white/90" />,
@@ -89,7 +89,7 @@ const projects: Project[] = [
     longDescription:
       "Jeu vidéo 2D inspiré du classique Space Invaders, entièrement développé en Python avec la bibliothèque graphique Tkinter. Le joueur contrôle un avion et doit esquiver/détruire les ennemis. Implémentation du moteur de collision, du système de score, des animations et des niveaux de difficulté progressifs.",
     technologies: ["Python 3", "Tkinter", "POO", "Canvas"],
-    pdf: "public/Documentation du Mini Projet-Bataille Aérienne .pdf",
+    pdf: "/Documentation du Mini Projet-Bataille Aérienne .pdf",
     color: "#f59e0b",
     gradient: "linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #0f172a 100%)",
     icon: <Rocket className="w-12 h-12 text-white/90" />,
@@ -105,7 +105,7 @@ const projects: Project[] = [
     longDescription:
       "Implémentation complète du jeu de Morpion (Tic-Tac-Toe) en Python avec interface graphique Tkinter. Modes de jeu : 2 joueurs ou contre l'IA (algorithme Minimax). Détection automatique du gagnant, gestion des matchs nuls, historique des scores, reset de partie. L'IA est imbattable sur le mode difficile.",
     technologies: ["Python 3", "Tkinter", "Minimax", "POO"],
-    pdf: "public/Documentation Complète — Morpion Tkinter (Tic-Tac-Toe) .pdf",
+    pdf: "/Documentation Complète — Morpion Tkinter (Tic-Tac-Toe) .pdf",
     color: "#ef4444",
     gradient: "linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #7f1d1d 100%)",
     icon: <Hash className="w-12 h-12 text-white/90" />,
@@ -422,7 +422,7 @@ const EpreuveE5 = () => (
         transition={{ duration: 0.5 }}
       >
         <a
-          href="public/BTS-SIO-2026-BOUNGOU GLOIRE.pdf"
+          href="/BTS-SIO-2026-BOUNGOU GLOIRE.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-gradient inline-flex"

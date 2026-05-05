@@ -102,17 +102,15 @@ const Home = () => {
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.35 }}
           >
 
-            <div className="pill-badge mb-5 inline-flex">Disponible · Alternance/Stage</div>
-
-
+            <div className="pill-badge mb-5 inline-flex">Disponible · Alternance / Stage</div>
 
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-1">
               Bonjour, je suis
             </h1>
 
-            <h2 className="text-5xl md:text-6xl xl:text-7xl font-extrabold leading-tight mb-3 gradient-text">
-              BOUNGOU MBIMI <br />
-              Gloire Bryan
+            <h2 className="text-4xl md:text-5xl xl:text-6xl font-extrabold leading-tight mb-3 gradient-text">
+              Gloire Bryan<br />
+              <span className="text-3xl md:text-4xl xl:text-5xl">BOUNGOU MBIMI</span>
             </h2>
 
             <div className="text-xl md:text-2xl font-semibold leading-tight mb-6 min-h-[2rem] flex items-center gap-2">
@@ -120,7 +118,7 @@ const Home = () => {
               <span className="text-white/75">
                 <Typewriter
                   options={{
-                    strings: ["Développeur Web Full-Stack", "Étudiant BTS SIO SLAM", "Ancien-Apprenti chez 42Consulting"],
+                    strings: ["Développeur Web Full-Stack", "Étudiant BTS SIO SLAM", "Ex-Apprenti chez 42Consulting"],
                     autoStart: true,
                     loop: true,
                     delay: 60,
@@ -131,7 +129,7 @@ const Home = () => {
             </div>
 
             <p className="text-white/55 text-base md:text-lg max-w-xl mb-8 leading-relaxed">
-              Étudiant en BTS SIO option SLAM, Ancien apprenti chez&nbsp;
+              Étudiant en BTS SIO option SLAM, ex-apprenti chez&nbsp;
               <span className="text-accent font-semibold">42Consulting</span>.
               Je conçois des solutions web innovantes — du backend robuste aux interfaces modernes et
               sécurisées.
@@ -154,7 +152,7 @@ const Home = () => {
                 Me contacter
               </a>
               <a
-                href="public/CV-BOUNGOU-Gloire.pdf"
+                href="/CV-BOUNGOU-Gloire.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-ghost-accent"

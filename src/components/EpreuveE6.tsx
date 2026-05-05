@@ -1,9 +1,8 @@
-import { FileText, Download, X, ExternalLink, BrainCircuit, CloudSun } from "lucide-react";
+import { FileText, Download, X, ExternalLink, ShieldCheck, Gamepad2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Title from "./Title";
 
-import mobileScreenshot from "../assets/Simulator Screenshot - iPhone 16 Pro - 2025-05-01 at 14.34.47.png";
 
 interface ProjectE6 {
   title: string;
@@ -23,42 +22,42 @@ interface ProjectE6 {
 const projectsE6: ProjectE6[] = [
   {
     title: "Diploma Gate Guardian",
-    subtitle: "Application web de surveillance de diplômes",
+    subtitle: "Vérification et authentification de documents officiels",
     description:
-      "Diploma Gate Guardian est une application numérique de vérification et d’authentification de documents officiels, conçue principalement pour les établissements scolaires et les administrations publiques.",
+      "Application web permettant de générer et vérifier l’authenticité de documents officiels (diplômes, attestations) via un code unique sécurisé.",
     longDescription:
-      "Application mweb  est une application web développée en TypeScript avec React, permettant de générer et vérifier l’authenticité de documents officiels (CSV, Excel, PDF) grâce à un code unique attribué à chaque document.",
-    technologies: ["React Native", "Expo", "OpenAI API", "SpeechRecognition", "TTS"],
-    pdf: "/GloireBoungAI – Assistant Vocal Intelligent .pdf",
-    fiche: "/fiche-de-réalisation.pdf",
-    image: mobileScreenshot,
+      "Application web développée en TypeScript avec React côté front-end et Node.js/Express côté back-end. Elle permet aux établissements scolaires de générer des documents authentifiés (CSV, Excel, PDF) dotés d’un code unique, et aux vérificateurs de confirmer leur validité en temps réel via une API sécurisée avec JWT.",
+    technologies: ["TypeScript", "React", "Node.js", "Express", "MongoDB", "JWT"],
+    pdf: "/Documentation-Diploma Gate Guardian.pdf",
+    fiche: "/rapport-alternance-42consulting.pdf",
+    image: null,
     color: "#00b5ff",
     gradient: "linear-gradient(135deg, #0ea5e9 0%, #7c3aed 100%)",
-    icon: <BrainCircuit className="w-12 h-12 text-white/90" />,
+    icon: <ShieldCheck className="w-12 h-12 text-white/90" />,
     stats: [
       { label: "Type", value: "Web App" },
-      { label: "API", value: "React (TypeScript)" },
+      { label: "Stack", value: "Fullstack" },
       { label: "Format", value: "PDF/CSV/Excel" },
     ],
   },
   {
     title: "Next Drop",
-    subtitle: "plateforme de découverte de jeux vidéo",
+    subtitle: "Plateforme de découverte de jeux vidéo",
     description:
-      "Site web présentant les prochaines sorties de jeux vidéo avec une interface immersive.",
+      "Site web au design rétrofuturiste cyberpunk présentant les prochaines sorties de jeux vidéo avec une interface immersive et animée.",
     longDescription:
-      "NextDrop est une plateforme web au design rétrofuturiste inspiré du cyberpunk. Elle permet aux utilisateurs de découvrir les prochaines sorties de jeux vidéo sur différentes plateformes avec une navigation fluide et animée.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+      "NextDrop est une plateforme web au design rétrofuturiste inspiré du cyberpunk. Elle permet aux utilisateurs de découvrir les prochaines sorties de jeux vidéo sur différentes plateformes (PC, PS5, Xbox, Switch) avec une navigation fluide et des animations CSS avancées. Entièrement développée en HTML/CSS/JavaScript vanilla.",
+    technologies: ["HTML5", "CSS3", "JavaScript"],
     pdf: null,
-    fiche: "/Fiche-de-réalisation.2.pdf",
+    fiche: "/rapport-stage-arpce.pdf",
     image: null,
     color: "#7c3aed",
     gradient: "linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%)",
-    icon: <CloudSun className="w-12 h-12 text-white/90" />,
+    icon: <Gamepad2 className="w-12 h-12 text-white/90" />,
     stats: [
       { label: "Type", value: "Web App" },
-      { label: "API", value: "HTML/CSS/JavaScript" },
-      { label: "Format", value: "Gaming / Cyberpunk" },
+      { label: "Stack", value: "Vanilla JS" },
+      { label: "Style", value: "Cyberpunk" },
     ],
   },
 ];
