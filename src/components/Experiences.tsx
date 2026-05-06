@@ -2,7 +2,6 @@ import Title from "./Title";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ExternalLink, ChevronDown, FileText, Download, X } from "lucide-react";
-// ExternalLink used in PdfModal only
 
 import imgHTML     from "../assets/techno/html.png";
 import imgCSS      from "../assets/techno/css.png";
@@ -158,10 +157,6 @@ const PdfModal = ({ exp, onClose }: { exp: Experience; onClose: () => void }) =>
 const ExperienceCard = ({ exp, i }: { exp: Experience; i: number }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [showPdf, setShowPdf] = useState(false);
-
-  const handleViewProjects = () => {
-    document.getElementById(exp.relatedSection)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <>
