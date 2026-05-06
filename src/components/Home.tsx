@@ -152,7 +152,7 @@ const Home = () => {
                 Me contacter
               </a>
               <a
-                href="/CV-BOUNGOU-Gloire.pdf"
+                href="./CV-BOUNGOU-Gloire.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-ghost-accent"
