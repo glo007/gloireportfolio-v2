@@ -5,9 +5,9 @@ import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "10+",  label: "Projets" },
-  { value: "2+",  label: "Ans d'exp." },
-  { value: "10+", label: "Technologies" },
+  { value: "14",    label: "Projets" },
+  { value: "2",     label: "Expériences pro" },
+  { value: "Bac+3", label: "En cours" },
 ];
 
 const Home = () => {
@@ -102,7 +102,7 @@ const Home = () => {
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.35 }}
           >
 
-            <div className="pill-badge mb-5 inline-flex">Disponible · Alternance / Stage</div>
+            <div className="pill-badge mb-5 inline-flex">Recherche d'alternance · Dev Web &amp; Sécurité</div>
 
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-extrabold text-white leading-tight mb-1">
               Bonjour, je suis
@@ -118,7 +118,7 @@ const Home = () => {
               <span className="text-white/75">
                 <Typewriter
                   options={{
-                    strings: ["Développeur Web Full-Stack", "Étudiant BTS SIO SLAM", "Ex-Apprenti chez 42Consulting"],
+                    strings: ["Développeur Web & Sécurité", "Étudiant en Bachelor à l'ESIEE", "En recherche d'alternance"],
                     autoStart: true,
                     loop: true,
                     delay: 60,
@@ -129,10 +129,10 @@ const Home = () => {
             </div>
 
             <p className="text-white/55 text-base md:text-lg max-w-xl mb-8 leading-relaxed">
-              Étudiant en BTS SIO option SLAM, ex-apprenti chez&nbsp;
-              <span className="text-accent font-semibold">42Consulting</span>.
-              Je conçois des solutions web innovantes — du backend robuste aux interfaces modernes et
-              sécurisées.
+              Étudiant en Bachelor Développeur Web &amp; Sécurité à l'
+              <span className="text-accent font-semibold">ESIEE</span>, je recherche une alternance.
+              Fort d'une première expérience en alternance chez 42Consulting, je conçois des applications
+              web fiables et sécurisées — de l'API aux interfaces.
             </p>
 
             {/* Stats */}
@@ -149,7 +149,7 @@ const Home = () => {
             <div className="flex flex-wrap gap-4 mb-8">
               <a href="#Contact" className="btn-gradient">
                 <MailOpen className="w-4 h-4" />
-                Me contacter
+                Me proposer une alternance
               </a>
               <a
                 href="./CV-BOUNGOU-Gloire.pdf"

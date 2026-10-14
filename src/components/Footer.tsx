@@ -4,10 +4,11 @@ import { FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
 const navLinks = [
   { label: "Accueil",        id: "Home" },
   { label: "À propos",       id: "About" },
+  { label: "Formation",      id: "Formation" },
+  { label: "Projets",        id: "Projets" },
   { label: "Expériences",    id: "Experiences" },
-  { label: "Épreuve E5",     id: "EpreuveE5" },
-  { label: "Épreuve E6",     id: "EpreuveE6" },
   { label: "Veille Tech",    id: "VeilleTechnologique" },
+  { label: "Archives BTS",   id: "BtsSio" },
   { label: "Contact",        id: "Contact" },
 ];
 
@@ -31,8 +32,8 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-white/35 text-sm leading-relaxed">
-              Développeur Web Full Stack · BTS SIO SLAM.
-              Passionné par la création de solutions numériques innovantes.
+              Développeur Web &amp; Sécurité · Bachelor ESIEE.
+              À la recherche d'une alternance pour concevoir des applications web sécurisées.
             </p>
           </div>
 

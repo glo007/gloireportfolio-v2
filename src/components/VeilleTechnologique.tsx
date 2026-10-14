@@ -82,7 +82,7 @@ const VeilleTechnologique = () => {
       <div className="max-w-7xl mx-auto">
         <Title
           title="Veille Technologique"
-          subtitle="BTS SIO SLAM — Mise à jour continue sur les évolutions du secteur."
+          subtitle="Mise à jour continue sur les évolutions du développement web et de la sécurité."
         />
 
         {/* ── Problématique ── */}
@@ -105,7 +105,7 @@ const VeilleTechnologique = () => {
             Comment l'intelligence artificielle générative transforme-t-elle les pratiques de développement web en 2024–2025,
             et quels sont ses impacts sur la qualité, la sécurité du code et l'expérience utilisateur ?
             Ce sujet fait directement écho à mes projets chez <span className="text-accent font-semibold">42Consulting</span> (authentification sécurisée),
-            à mon application <span className="text-accent font-semibold">GloireBoungAI</span> (OpenAI API) et à mon projet <span className="text-accent font-semibold">FaceTracking</span> (vision par ordinateur).
+            à ma formation en développement web &amp; sécurité et à mon projet <span className="text-accent font-semibold">FaceTracking</span> (vision par ordinateur).
           </p>
         </motion.div>
 
@@ -276,7 +276,7 @@ const VeilleTechnologique = () => {
               <p className="text-white/70 text-sm leading-relaxed">
                 La question que je me pose désormais : <span className="text-white font-semibold italic">
                 "Comment cette technologie va-t-elle changer ma façon de coder demain ?"
-                </span> — L'IA générative va exiger des développeurs SLAM une double compétence :
+                </span> — L'IA générative va exiger des développeurs une double compétence :
                 maîtriser les outils IA ET comprendre leurs limites en matière de sécurité.
               </p>
 
@@ -294,7 +294,7 @@ const VeilleTechnologique = () => {
                 {[
                   { title: "Agents autonomes", desc: "Des LLMs capables d'exécuter des tâches complexes sans intervention humaine (LangGraph, AutoGen)." },
                   { title: "IA embarquée (Edge)", desc: "Des modèles IA légers directement dans le navigateur ou sur appareil mobile, sans cloud." },
-                  { title: "Réglementation IA", desc: "L'AI Act européen impose transparence et audit des systèmes IA — opportunité pour la sécurité SLAM." },
+                  { title: "Réglementation IA", desc: "L'AI Act européen impose transparence et audit des systèmes IA — opportunité pour les profils dev &amp; sécurité." },
                 ].map((p, i) => (
                   <div key={i} className="rounded-xl p-4"
                        style={{ background: "rgba(0,181,255,0.04)", border: "1px solid rgba(0,181,255,0.1)" }}>

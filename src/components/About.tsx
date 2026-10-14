@@ -8,8 +8,9 @@ const sections = [
     id: 1,
     title: "À propos de moi",
     description: [
-      "Étudiant en BTS SIO option SLAM, passionné par le développement web.",
-      "En alternance chez 42Consulting, je travaille sur un projet de vérification et d'authentification des documents officiels.",
+      "Étudiant en Bachelor Développeur Web & Sécurité à l'ESIEE, après un BTS SIO et un Bachelor Concepteur d'Applications.",
+      "Ex-apprenti chez 42Consulting, où j'ai développé une plateforme d'authentification de documents officiels.",
+      "Je recherche une alternance en développement web et sécurité applicative.",
     ],
     icon: <LetterText className="w-5 h-5 text-accent" />,
   },
@@ -17,9 +18,9 @@ const sections = [
     id: 2,
     title: "Ce que je fais",
     description: [
-      "Développement backend & frontend avec Node.js, React, MongoDB.",
-      "Sécurisation des applications et gestion des accès utilisateurs.",
-      "Création d'interfaces modernes avec glassmorphism & Tailwind.",
+      "Développement fullstack avec React, TypeScript, Node.js et MongoDB.",
+      "Sécurisation des applications : authentification JWT, gestion des habilitations, contrôle des accès.",
+      "Traitement de données et automatisation : Python, SQL, tests et intégration continue.",
     ],
     icon: <CalendarSync className="w-5 h-5 text-accent" />,
   },
@@ -36,8 +37,9 @@ const sections = [
 ];
 
 const skills = [
-  "React", "Node.js", "TypeScript", "MongoDB", "Tailwind CSS",
-  "Express.js", "Python", "React Native", "Git",
+  "React", "TypeScript", "Node.js", "Express.js", "MongoDB", "PostgreSQL",
+  "Python", "SQL", "JWT", "Tailwind CSS", "React Native", "Git / GitHub Actions",
+  "Réseau Cisco", "Wireshark",
 ];
 
 const About = () => {
@@ -46,7 +48,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto">
         <Title
           title="À propos"
-          subtitle="Développeur web passionné, en constante progression."
+          subtitle="Développeur web orienté sécurité, en recherche d'alternance."
         />
 
         <div className="flex flex-col md:flex-row items-center gap-14">

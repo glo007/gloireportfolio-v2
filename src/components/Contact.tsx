@@ -86,7 +86,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-white/40 text-xs mb-0.5">Disponibilité</p>
-                    <p className="text-white text-sm">Alternance · Stage</p>
+                    <p className="text-white text-sm">Recherche d'alternance · Dev Web &amp; Sécurité</p>
                   </div>
                 </div>
               </div>

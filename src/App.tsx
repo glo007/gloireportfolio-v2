@@ -4,9 +4,10 @@ import Experiences from "./components/Experiences";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import EpreuveE6 from "./components/EpreuveE6";
 import VeilleTechnologique from "./components/VeilleTechnologique";
-import EpreuveE5 from "./components/EpreuveE5";
+import Formation from "./components/Formation";
+import Projets from "./components/Projets";
+import BtsSio from "./components/BtsSio";
 import Contact from "./components/Contact";
 
 export default function App() {
@@ -27,10 +28,11 @@ export default function App() {
       <Navbar />
       <Home />
       <About />
+      <Formation />
+      <Projets />
       <Experiences />
-      <EpreuveE5 />
-      <EpreuveE6 />
       <VeilleTechnologique />
+      <BtsSio />
       <Contact />
       <Footer />
     </div>
